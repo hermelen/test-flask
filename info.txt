@@ -1,0 +1,24 @@
+(test-flask) hermelen@hermelen-hp-i5:~/Code/Python/test-flask$ python
+from models import db
+db.create_all()
+from models import User
+user1 = User(username = "Hermelen", first_name = "Hermelen", last_name = "PERIS", email = "hermelen.peris@gmail.com", avatar = "http://www.taxi-vip-paris.com/img/b/14/148562/angry-bird-red-bird.jpg")
+user2 = User(username = "Naima", first_name = "Naima", last_name = "CHAHBOUN", email = "atelierjade@yahoo.fr", avatar = "http://www.techagesite.com/iphone-4-wallpapers/angry-birds/angry-birds-iphone-4-wallpaper-mobile-splitter-blue-bird.jpg")
+user3 = User(username = "Jawhar", first_name = "Jawhar", last_name = "PERIS-CHAHBOUN", email = "jawhar.pc@gmail.com", avatar = "https://www.desktopbackground.org/p/2014/03/17/732645_angry-birds-go-chuck-wallpaper_1920x1080_h.jpg")
+db.session.add(user1)
+db.session.add(user2)
+db.session.add(user3)
+db.session.commit()
+
+
+Collecting Flask-WTF
+  Downloading https://files.pythonhosted.org/packages/60/3a/58c629472d10539ae5167dc7c1fecfa95dd7d0b7864623931e3776438a24/Flask_WTF-0.14.2-py2.py3-none-any.whl
+Requirement already satisfied: Flask in /home/hermelen/.local/lib/python2.7/site-packages (from Flask-WTF)
+Requirement already satisfied: WTForms in /home/hermelen/.local/lib/python2.7/site-packages (from Flask-WTF)
+Requirement already satisfied: Werkzeug>=0.14 in /home/hermelen/.local/lib/python2.7/site-packages (from Flask->Flask-WTF)
+Requirement already satisfied: click>=5.1 in /home/hermelen/.local/lib/python2.7/site-packages (from Flask->Flask-WTF)
+Requirement already satisfied: Jinja2>=2.10 in /home/hermelen/.local/lib/python2.7/site-packages (from Flask->Flask-WTF)
+Requirement already satisfied: itsdangerous>=0.24 in /home/hermelen/.local/lib/python2.7/site-packages (from Flask->Flask-WTF)
+Requirement already satisfied: MarkupSafe>=0.23 in /home/hermelen/.local/lib/python2.7/site-packages (from Jinja2>=2.10->Flask->Flask-WTF)
+Installing collected packages: Flask-WTF
+Successfully installed Flask-WTF-0.14.2

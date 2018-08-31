@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Suscribe{% endblock %}
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+  {{ form.hidden_tag() }}
+  {# {{ form.csrf_token }} #}
+  <div class="form-row">
+    <div class="input-group mb-3 col-12 col-sm-6">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="first-name-label">Prenom</span>
+      </div>
+      {{ form.first_name_input(class_="form-control") }}
+    </div>
+    <div class="input-group mb-3 col-12 col-sm-6">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="last-name-label">Nom</span>
+      </div>
+      {{ form.last_name_input(class_="form-control") }}
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="input-group mb-3 col-12 col-sm-6">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="email-label">E-mail</span>
+      </div>
+      {{ form.email_input(class_="form-control") }}
+    </div>
+    <div class="input-group mb-3 col-12 col-sm-6">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Avatar</span>
+      </div>
+      <div class="custom-file">
+        {{ form.avatar_input(size=20, class_="custom-file-input") }}
+        <label class="custom-file-label" for="avatar">Image</label>
+      </div>
+    </div>
+  </div>
+  <input type="submit" value="Valider">
+</form>
+{% endblock %}

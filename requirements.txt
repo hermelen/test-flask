@@ -1,0 +1,14 @@
+Flask==1.0.2
+Flask-SQLAlchemy==2.3.2
+mysql-python==1.2.5
+
+sightengine==1.4.0
+
+
+Flask-WTF==0.14.2
+Jinja2==2.10
+MarkupSafe==1.0
+WTForms==2.2.1
+Werkzeug==0.14.1
+click==6.7
+itsdangerous==0.24
